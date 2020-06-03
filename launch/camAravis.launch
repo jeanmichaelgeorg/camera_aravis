@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <arg name="camera_name" default="camera" />
+  <arg name="camera_serial" default="0" />
+
+
+  <node name="camera" pkg="camera_aravis" type="camnode" output="screen">
+
+    <param name="ExposureAuto" value="Continuous" />
+    <param name="GainAuto" value="Continuous" />
+    <param name="AcquisitionMode" value="Continuous" />
+    <param name="AcquisitionFrameRate" value="20" />
+    <param name="mtu" value="1400" />
+    <param name="PixelFormat" value="BayerRG8" />
+    <param name="guid" value="FLIR-19168018" />
+
+  </node>
+
+</launch>
